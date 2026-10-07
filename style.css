@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&display=swap');
+
+
+
+* {
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+
+:root {
+  - Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+- Red 400 (input errors): hsl(0, 100%, 66%);
+-  200: hsl(270, 3%, 87%)
+- Gray 400: hsl(212, 12%, 71%)
+- Purple 950: hsl(278, 68%, 11%)
+}
+body {
+  min-height:100vh;
+  font-family: "Space Grotesk", sans-serif;
+  background-image: url("bg-main-mobile.png");
+  background-repeat: no-repeat;
+  background-size: 100% 240px;
+  background-position: top;
+  background-color: white;
+}
+
+.card-form-page {
+  min-height:100%;
+}
+
+.card-preview {
+  position:relative;
+  height:280px;
+  width: 100%;
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width:285px;
+}
+
+.card-front {
+top:125px;
+left:16px;
+z-index: 2;
+}
+
+.card-back {
+  top:32px;
+  right:16px;
+}
+
+.card-cvc {
+  position: absolute;
+  top:50%;
+  right:38px;
+  transform: translateY(-50%);
+  color:white;
+  font-size: 11px;
+}
+.card-front img,
+.card-back img {
+  width:100%;
+  display:block;
+}
+
+
+.card-front-content {
+  position: absolute;
+  inset:0;
+  padding:20px;
+  color:white;
+  display:flex;
+  flex-direction: column;
+}
+
+.card-front-content > img {
+  width:50px;
+}
+
+.card-number {
+  position: absolute;
+  top:85px;
+  left:20px;
+right:20px;
+  text-align:center;
+  font-size:18px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.card-details {
+  position: absolute;
+  left:20px;
+  right:20px;
+  bottom:18px;
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+
+.form-section {
+  padding: 50px 25px;
+}
+
+.form-group label {
+  display:block;
+  margin-bottom:8px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: hsl(278, 68%, 11%);
+  font-weight:600;
+}
+
+.cardholder-input {
+  width:100%;
+  border:1.3px solid hsl(212, 12%, 71%);
+  border-radius: 8px;
+  font-size: 16px;
+  padding:12px 20px;
+  letter-spacing: 1px;
+  opacity:0.4;
+  font-weight:600;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.cardnumber-input {
+  width:100%;
+  border:1.3px solid hsl(212, 12%, 71%);
+  border-radius: 8px;
+  font-size: 16px;
+  padding:12px 20px;
+  letter-spacing: 1px;
+  opacity:0.4;
+  font-weight:600;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.form-row {
+display:grid;
+grid-template-columns: 1fr 1.2fr;
+gap:15px;
+margin-bottom:20px;
+}
+
+.form-row .form-group:first-child label {
+  white-space: nowrap;
+}
+
+
+.date-inputs {
+display:flex;
+gap:8px;
+}
+
+.date-inputs > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.month-input,
+.year-input {
+  width:100%;
+  border:1.3px solid hsl(212, 12%, 71%);
+  border-radius: 8px;
+  font-size: 16px;
+  padding:12px 15px;
+  letter-spacing: 1px;
+  opacity:0.4;
+  font-weight:600;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.cvc-input {
+  width:100%;
+  border:1.3px solid hsl(212, 12%, 71%);
+  border-radius: 8px;
+  font-size: 16px;
+  padding:12px 20px;
+  letter-spacing: 1px;
+  opacity:0.4;
+  font-weight: 600;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.confirm-btn {
+width:100%;
+  background-color: hsl(278, 68%, 11%);
+  color:white;
+  font-weight:600;
+  font-size:16px;
+  text-align:center;
+  border-radius:8px;
+  padding:17px 0;
+  border:none;
+  letter-spacing:0.5px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.complete-state {
+  display:none;
+  padding:0 25px;
+  text-align: center;
+  margin-top:40px;
+  margin-bottom:40px;
+}
+
+
+.complete-state img {
+  width:80px;
+  margin-bottom: 25px;
+}
+
+.complete-state h1 {
+  letter-spacing:2.5px;
+  font-size:30px;
+  color: hsl(278, 68%, 11%);
+  margin-bottom: 18px;
+}
+
+
+.complete-state p {
+  font-size: 17px;
+  color: hsl(212, 12%, 71%);
+  margin-bottom:30px;
+}
+
+
+.complete-state button {
+  width:100%;
+  background-color: hsl(278, 68%, 11%);
+  color:white;
+  font-weight:600;
+  font-size:16px;
+  text-align:center;
+  border-radius:8px;
+  padding:17px 0;
+  border:none;
+  letter-spacing:0.5px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+
+.error-message {
+  color: hsl(0, 100%, 66%);
+  font-size: 12px;
+  margin-top:6px;
+  margin-bottom:6px;
+}
+
+.cardnumber-error {
+  color: hsl(0, 100%, 66%);
+  font-size: 12px;
+  margin-top:6px;
+  margin-bottom: 6px;
+}
+
+.month-error,
+.year-error,
+.cvc-error {
+  color: hsl(0, 100%, 66%);
+  font-size: 12px;
+  margin-top:6px;
+}
